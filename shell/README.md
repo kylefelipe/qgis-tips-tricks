@@ -1,0 +1,3 @@
+# qgis-tips-tricks
+Dicas e truques a serem usadas no qgis, utilizando shell.
+Use a vontade...
