@@ -1,6 +1,11 @@
 # funcoes_qgis
 Aqui estão contidas as funções que tenho criado para o QGIS.
 
+Como inserir funções novas no QGIS:
+Abra uma tabela de atributos e clique em "Selecionar por Expressão"
+Na Janela que abrir, clique na aba "EDITOR DE FUNÇÃO"
+Clique em "NEW FILE", copie o código da expressão que deseja e cole na janela do QGIS, em seguida clique em LOAD....
+
 Função verifica_valor:
   Recebe uma lista, ou um campo que contenha uma lista, os valores devem possui um separador (virgula, dois pontos, ponto e vírgula, etc),
   e retorna Verdadeiro ou Falso.
