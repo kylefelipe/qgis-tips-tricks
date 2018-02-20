@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 @qgsfunction(args=2, group='Date and Time')
 def padroniza_data(values, feature, parent):
     """padroniza as datas de um campo do qgis para o seguinte formato aaaa-mm-dd.
@@ -10,16 +9,13 @@ def padroniza_data(values, feature, parent):
     meses = {'JANEIRO': '01', 'FEVEREIRO': '02', 'MARÇO': '03', 'ABRIL': '04', 'MAIO': '05', 'JUNHO': '06',
              'JULHO': '07', 'AGOSTO': '08', 'SETEMBRO': '09', 'OUTUBRO': '10', 'NOVEMBRO': '11', 'DEZEMBRO': '12'}
     str_data = str(values[1])
-    dia, mes, ano = str_data.split(values[0])
-
-    try:
-        data_correta = ""
-        if str.isdigit(mes) is False:
+    if len(str_data.split(values[0])) == 3:
+        dia, mes, ano = str_data.split(values[0])
+        if str.isdigit(mes.encode("utf8")) is False:
             for i in meses.iterkeys():
                 if mes[:3].upper() == i[:3]:
-                    data_correta = "{ano}-{mes}-{dia:02d}".format(ano=ano, mes=meses[i], dia=int(dia))
+                    return "{ano}-{mes}-{dia:02d}".format(ano=ano, mes=meses[i], dia=int(dia))
         else:
-            data_correta = "{ano}-{mes:02d}-{dia:02d}".format(ano=ano, mes=int(mes), dia=int(dia))
-        return data_correta
-    except:
+            return "{ano}-{mes:02d}-{dia:02d}".format(ano=ano, mes=int(mes), dia=int(dia))
+    else:
         return "Null"
