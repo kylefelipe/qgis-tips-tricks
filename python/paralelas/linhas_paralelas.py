@@ -51,7 +51,7 @@ if __name__ == '__main__':
         con.executescript(sql2)
         con.commit()
         con.close()
-        print "Linhas paralelas geradas com sucesso...."
+        print "Foram geradas {qt} linhas paralelas com sucesso....".format(qt=len(distancia))
 
 
     except:
