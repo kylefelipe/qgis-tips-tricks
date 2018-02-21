@@ -1,5 +1,5 @@
 # Comandos bash para importar varios arquivos vetoriais ao PortGIS.
-###Atenção:
+### Atenção:
 #### comandos meramente ilustrativos. Vários parâmetros dos comando usados [shp2pgsql](https://postgis.net/docs/using_postgis_dbmanagement.html#shp2pgsql_usage) foram ignorados!
 ```
 for a in *.shp; do echo "Convertentado $a"; shp2pgsql $a schema.table > ${a%.*}.sql; done
