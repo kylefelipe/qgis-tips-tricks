@@ -1,6 +1,6 @@
 # QGIS, tips & tricks
 Dicas e truques a serem usadas no qgis e até mesmo em outros softwares, utilizando SQL, python, shell etc...
-A intenção é divulgar e aprofundar ainda mais o uso de opções livres para geoprocessamento, e não ficar presos à licensas.
+A intenção é divulgar e aprofundar ainda mais o uso de opções livres para geoprocessamento, e não ficar presos à licenças.
 
 ## Diretórios:
 
@@ -10,4 +10,4 @@ A intenção é divulgar e aprofundar ainda mais o uso de opções livres para g
 * [sql](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/sql): Códigos utilizando SQL em diversos Bancos de Dados Geográficos, como Spatialite, POSTGIS etc.
 
 Usem a vontade...
-Por favor, reportem "bugs" ou sugestoes.
+Por favor, reportem "bugs" ou sugestoes, participem com "issues".
