@@ -44,7 +44,7 @@ if __name__ == '__main__':
         # print distancia
         sql = """INSERT INTO linhas_paralelas(geom)
         SELECT ST_OffsetCurve(geometry, ?) from paracatu;"""
-	con.executemany(sql,distancia)
+        con.executemany(sql,distancia)
         con.commit()
         con.close()
         print "Foram geradas {qt} linhas paralelas com sucesso....".format(qt=len(distancia))
