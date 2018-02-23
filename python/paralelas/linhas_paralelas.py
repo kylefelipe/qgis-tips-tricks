@@ -28,7 +28,7 @@ if __name__ == '__main__':
         print "SQLITE VERSION:", dados[0][0]
         print "SPATIALITE VERSION: ", dados[0][1]
 
-        # Creating table paracatu_paralelas to receive the new lines.
+        # Creating table linhas_paralelas to receive the new lines.
         con.executescript("""CREATE TABLE IF NOT EXISTS linhas_paralelas (id INTEGER PRIMARY KEY AUTOINCREMENT);
         SELECT AddGeometryColumn ('linhas_paralelas', 'geom', 32723, 'LINESTRING', 'XY');""")
         con.commit()
@@ -37,18 +37,14 @@ if __name__ == '__main__':
         distancia = []
         # Linhas do lado esquerdo (negativo)
         for i in range(145, 13000, 145):
-            distancia.append((float(i)/100)*-1)
+            distancia.append(((float(i)/100)*-1,))
         # linhas do lado direito (positivo)
         for i in range(145, 13000, 145):
-            distancia.append((float(i)/100))
+            distancia.append(((float(i)/100),))
         # print distancia
         sql = """INSERT INTO linhas_paralelas(geom)
         SELECT ST_OffsetCurve(geometry, ?) from paracatu;"""
-        sql2 = ""
-        for i in distancia:
-            sql2 += """INSERT INTO linhas_paralelas(geom)
-        SELECT ST_OffsetCurve(geometry,{dist}) from paracatu;\n""".format(dist=i)
-        con.executescript(sql2)
+	con.executemany(sql,distancia)
         con.commit()
         con.close()
         print "Foram geradas {qt} linhas paralelas com sucesso....".format(qt=len(distancia))
