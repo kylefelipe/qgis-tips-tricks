@@ -11,7 +11,7 @@ from os import putenv
 def usage():
     print """
     Script tosco mostrando como gerar paralelas de 1.45m usando Spatialite.
-    Precisa de um banco de dados trator.sqlite contendo a linha de referencia.
+    ATENCAO: Precisa de um banco de dados paracatu.sqlite contendo a linha (LINESTRING) de referencia.
     """
 
 
@@ -28,7 +28,11 @@ if __name__ == '__main__':
         print "SQLITE VERSION:", dados[0][0]
         print "SPATIALITE VERSION: ", dados[0][1]
 
+<<<<<<< HEAD
         # Creating table linhas_paralelas to receive the new lines.
+=======
+        # Creating table paracatu_paralelas to receive the new lines. 32723=WGS84 UTM 23S
+>>>>>>> 4d25992e2001ff3fd36898e8f7404b38f6b66d9b
         con.executescript("""CREATE TABLE IF NOT EXISTS linhas_paralelas (id INTEGER PRIMARY KEY AUTOINCREMENT);
         SELECT AddGeometryColumn ('linhas_paralelas', 'geom', 32723, 'LINESTRING', 'XY');""")
         con.commit()
