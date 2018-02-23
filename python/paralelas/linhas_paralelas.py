@@ -28,7 +28,7 @@ if __name__ == '__main__':
         print "SQLITE VERSION:", dados[0][0]
         print "SPATIALITE VERSION: ", dados[0][1]
 
-        # Creating table paracatu_paralelas to receive the new lines.
+        # Creating table paracatu_paralelas to receive the new lines. 32723=WGS84 UTM 23S
         con.executescript("""CREATE TABLE IF NOT EXISTS linhas_paralelas (id INTEGER PRIMARY KEY AUTOINCREMENT);
         SELECT AddGeometryColumn ('linhas_paralelas', 'geom', 32723, 'LINESTRING', 'XY');""")
         con.commit()
