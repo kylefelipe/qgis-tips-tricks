@@ -11,7 +11,7 @@ from os import putenv
 def usage():
     print """
     Script tosco mostrando como gerar paralelas de 1.45m usando Spatialite.
-    Precisa de um banco de dados paracatu.sqlite contendo a linha (LINESTRING) de referencia.
+    ATENCAO: Precisa de um banco de dados paracatu.sqlite contendo a linha (LINESTRING) de referencia.
     """
 
 
