@@ -1,9 +1,10 @@
 #!/usr/bin/python
-#http://www.postgresqltutorial.com/postgresql-python/connect/
+# http://www.postgresqltutorial.com/postgresql-python/connect/
 # sudo apt-cache search psycopg2
 import psycopg2
 from config import config
- 
+
+
 def connect():
     """ Connect to the PostgreSQL database server """
     conn = None
@@ -18,7 +19,7 @@ def connect():
         # create a cursor
         cur = conn.cursor()
         
- # execute a statement
+        # execute a statement
         print('PostgreSQL database version:')
         cur.execute('SELECT PostGIS_Full_Version()')
  
@@ -26,12 +27,11 @@ def connect():
         db_version = cur.fetchone()
         print(db_version)
         
-        cur.execute('SELECT count(*) from cadastros;')
+        cur.execute('SELECT count(*) from "Limites_Estaduais_GCS";')
         retorno = cur.fetchone()
         print(retorno)
 
-       
-     # close the communication with the PostgreSQL
+        # close the communication with the PostgreSQL
         cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
