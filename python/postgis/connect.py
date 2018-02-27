@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 # http://www.postgresqltutorial.com/postgresql-python/connect/
 # Author: Julio Menezes
 # Mod by: Kyle Felipe
@@ -9,8 +10,8 @@ import psycopg2
 import csv
 import config
 
-csv_params = config.config_csv()
-table_params = config.config_table()
+csv_params = config.config(filename='database.ini', section='file_csv')
+table_params = config.config(filename='database.ini', section='table_csv')
 
 
 def open_csv():
@@ -19,6 +20,7 @@ def open_csv():
         rows = list(csv.reader(csv_file, delimiter=csv_params["delimiter"]))
         heading = rows[0]
         sql = str.join(" text, ", heading)
+        # print("ok")
         return heading, sql
 
 
@@ -27,7 +29,7 @@ def connect():
     conn = None
     try:
         # read connection parameters
-        params = config.config_db()
+        params = config.config(filename='database.ini', section='postgresql')
  
         # connect to the PostgreSQL server
         print('Connecting to the PostgreSQL database...')
@@ -44,26 +46,24 @@ def connect():
         db_version = cur.fetchone()
         print(db_version)
         
-        cur.execute('SELECT count(*) from shapes_basicos."Limites_Municipais_2016_jun";')
+        cur.execute('SELECT count(*) from public."Limites Municipais";')
         retorno = cur.fetchone()
         print(retorno)
 
         # Creating tabel acording to database.ini [table] and importing a csv file.
 
-        heading, data = open_csv()
         print("Creating tabel {}...".format(table_params["table"]))
-        sql_create = ("""CREATE TABLE {schema}.{table} (id bigserial, {columns} text);"""
-            .format(schema=table_params["schema"], table=table_params["table"], columns=open_csv()[1]))
+        sql_create = ("""CREATE TABLE {schema}.{table} (id bigserial, 
+        {columns} text);""".format(schema=table_params["schema"], table=table_params["table"], columns=open_csv()[1]))
         cur.execute(sql_create)
+        print(sql_create)
 
         # Importing data from CSV
         print("Importing CSV file...")
-        sql_copy = ("""COPY {schema}.{table} ({columns})
-        FROM '{path}' WITH (FORMAT CSV, HEADER, DELIMITER '{delim}');"""
-                    .format(schema=table_params["schema"], table=table_params["table"],
-                            columns=str.join(" ,",open_csv()[0]), path=csv_params["path"], delim=csv_params["delimiter"]))
+        csv_stdin = open(file=csv_params["path"], mode="r", newline='')
 
-        cur.execute(sql_copy)
+        cur.copy_from(csv_stdin.readlines()[1:], table=table_params["table"], sep=csv_params["delimiter"],columns=open_csv()[0])
+        csv_stdin.close()
 
         # close the communication with the PostgreSQL
         cur.close()
