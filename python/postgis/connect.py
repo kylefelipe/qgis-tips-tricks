@@ -27,6 +27,7 @@ def open_csv():
 def connect():
     """ Connect to the PostgreSQL database server """
     conn = None
+    join_params = config.config(filename='database.ini', section='join_table')
     try:
         # read connection parameters
         params = config.config(filename='database.ini', section='postgresql')
@@ -45,15 +46,16 @@ def connect():
         # display the PostgreSQL database server version
         db_version = cur.fetchone()
         print(db_version)
-        
-        cur.execute('SELECT count(*) from public."Limites Municipais";')
+        sql_count = """SELECT count(*) from {schema}.{table};""".format(schema=join_params["schema"],
+                                                                        table=join_params["table"])
+        cur.execute(sql_count)
         retorno = cur.fetchone()
         print(retorno)
 
         # Creating tabel acording to database.ini [table] and importing a csv file.
 
         print("Creating tabel {}...".format(table_params["table"]))
-        sql_create = ("""CREATE TABLE {schema}.{table} (id bigserial, 
+        sql_create = ("""CREATE TABLE IF NOT EXISTS {schema}.{table} (id bigserial, 
         {columns} text);""".format(schema=table_params["schema"], table=table_params["table"], columns=open_csv()[1]))
         cur.execute(sql_create)
         print(sql_create)
@@ -70,6 +72,20 @@ def connect():
 
         cur.copy_expert(sql=sql_copy, file=csv_stdin)
         csv_stdin.close()
+        print("Import done...\nJoing tables...")
+
+        # Joining tables
+        sql_join = """CREATE OR REPLACE VIEW {schema}.join_csv_teste AS
+        SELECT a.id, a.municipio, a.coluna_1, a.coluna_2,b.{geometry}
+        FROM {table_csv} as a, {join_table} as b
+        WHERE a.{csv_key}::text = b.{join_key};""".format(schema=join_params["schema"],
+                                                          geometry=join_params["geometry"],
+                                                          table_csv=table_params["table"],
+                                                          join_table=join_params["table"],
+                                                          csv_key=table_params["key"],
+                                                          join_key=join_params["key"]
+                                                          )
+        cur.execute(sql_join)
 
         # close the communication with the PostgreSQL
         cur.close()
@@ -80,8 +96,6 @@ def connect():
         if conn is not None:
             conn.close()
             print('Database connection closed.')
-
-
 
  
 if __name__ == '__main__':
