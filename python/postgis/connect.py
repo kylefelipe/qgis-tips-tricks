@@ -60,9 +60,15 @@ def connect():
 
         # Importing data from CSV
         print("Importing CSV file...")
+        sql_copy = (
+            """COPY {schema}.{table} ({columns}) FROM STDIN 
+            WITH (FORMAT CSV, HEADER, DELIMITER '{delim}');""".format(schema=table_params["schema"],
+                                                                      table=table_params["table"],
+                                                                      columns=str.join(" ,", open_csv()[0]),
+                                                                      delim=csv_params["delimiter"]))
         csv_stdin = open(file=csv_params["path"], mode="r", newline='')
 
-        cur.copy_from(csv_stdin.readlines()[1:], table=table_params["table"], sep=csv_params["delimiter"],columns=open_csv()[0])
+        cur.copy_expert(sql=sql_copy, file=csv_stdin)
         csv_stdin.close()
 
         # close the communication with the PostgreSQL
@@ -74,7 +80,9 @@ def connect():
         if conn is not None:
             conn.close()
             print('Database connection closed.')
- 
+
+
+
  
 if __name__ == '__main__':
     connect()
