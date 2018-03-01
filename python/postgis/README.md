@@ -6,7 +6,7 @@ em seguida, fazer a união desses dados a uma tabela que já contenha geometria 
 
 A tabela utilizada para fazer o georreferenciamento dos dados do CSV foi o do Limite Municipal de MG (IBGE).
 
-__ATENÇÃO:__ É necessário a instalação do psycopg no Python antes de utilizar.
+__ATENÇÃO:__ É necessário a instalação do [psycopg](http://initd.org/psycopg/docs/index.html) no Python antes de utilizar.
 
 * [config.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/postgis/config.py): Código de busca a configuração dos dados para o [connect.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/postgis/connect.py)..
 * [connect.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/postgis/connect.py): Script de inserção do CSV e cruzamento das tabelas.
