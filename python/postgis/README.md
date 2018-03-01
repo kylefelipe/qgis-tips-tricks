@@ -1,7 +1,7 @@
 # QGIS, tips & tricks - PYTHON - Postgis
 
 O script surgiu de uma necessidade de um colega no grupo do [Telegram](https://telegram.org) ThinkFree - Qgis.
-A intenção é inserir os dados de um aruivo CSV em um bando de dados [POSTGIS e fazer a união com uma](https://postgis.net/) e,
+A intenção é inserir os dados de um aruivo CSV em um banco de dados [POSTGIS e fazer a união com uma](https://postgis.net/) e,
 em seguida, fazer a união desses dados a uma tabela que já contenha geometria definida, georreferenciando os dados do CSV.
 
 A tabela utilizada para fazer o georreferenciamento dos dados do CSV foi o do Limite Municipal de MG (IBGE).
