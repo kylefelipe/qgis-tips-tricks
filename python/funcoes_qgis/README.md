@@ -1,4 +1,4 @@
-# funcoes_qgis
+# QGIS, tips & tricks - PYTHON - funcoes_qgis
 Aqui estão contidas as funções que tenho criado para o QGIS.
 
 Como inserir funções novas no QGIS:
