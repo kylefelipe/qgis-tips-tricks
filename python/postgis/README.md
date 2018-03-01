@@ -10,5 +10,5 @@ __ATENÇÃO:__ É necessário a instalação do psycopg no Python antes de utili
 
 * [config.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/postgis/config.py): Código de busca a configuração dos dados para o [connect.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/postgis/connect.py)..
 * [connect.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/postgis/connect.py): Script de inserção do CSV e cruzamento das tabelas.
-* [database.ini](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/postgis/database.ini): Arquivo contendo os paramentos de conexo com o bd Postgis, do CSV e da tabela que será usada no georreferenciamento dos dados.
+* [database.ini](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/postgis/database.ini): Arquivo contendo os paramentos de conexão com o bd Postgis, do CSV e da tabela que será usada no georreferenciamento dos dados.
 * [arquivo.csv](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/postgis/arquivo.csv): Aquivo utilizado no exemplo.
