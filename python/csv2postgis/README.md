@@ -1,4 +1,4 @@
-# QGIS, tips & tricks - PYTHON - Postgis
+# QGIS, tips & tricks - PYTHON - csc2postgis
 
 O script surgiu de uma necessidade de um colega no grupo do [Telegram](https://telegram.org) ThinkFree - Qgis.
 A intenção é, utilizando __Python 3__, inserir os dados de um aruivo CSV em um banco de dados [POSTGIS](https://postgis.net/) e,
