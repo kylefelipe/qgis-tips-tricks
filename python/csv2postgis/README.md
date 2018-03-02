@@ -10,8 +10,8 @@ __ATENÇÃO:__ É necessário a instalação do [psycopg](http://initd.org/psyco
 
 É composto por:
 
-* [config.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/csv2postgis/config.py): Código de busca a configuração dos dados para o [connect.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/csv2postgis/connect.py)..
-* [connect.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/csv2postgis/connect.py): Script de inserção do CSV e cruzamento das tabelas.
+* [config.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/csv2postgis/config.py): Código de busca a configuração dos dados para o [csv2postgis.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/csv2postgis/csv2postgis.py)..
+* [csv2postgis.py](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/csv2postgis/csv2postgis.py): Script de inserção do CSV e cruzamento das tabelas.
 * [database.ini](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/csv2postgis/database.ini): Arquivo contendo os paramentos de conexão com o bd Postgis, do CSV e da tabela que será usada no georreferenciamento dos dados.
 * [arquivo.csv](https://github.com/kylefelipe/qgis-tips-tricks/blob/master/python/csv2postgis/arquivo.csv): Aquivo utilizado no exemplo.
 
@@ -59,7 +59,7 @@ A função possui dois parâmetros a serem informados no momento da uilitzação
 * section: Nome da sessão que deseja acessar.
 
 
-## connect.py
+## csv2postgis.py
 
 É o arquivo principal, contendo todo os comandos python e SQL utilizados na inserção e cruzamento dos dados.
 contem duas variáveis globais e as funções utilizadas:
