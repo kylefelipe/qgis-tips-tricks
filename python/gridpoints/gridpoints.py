@@ -11,8 +11,8 @@ def uso():
     sys.stderr.write ('Digite apenas numeros\n')
     sys.stderr.write ('''
     Uso:
-        gridpoints <x0> <y> <número de colunas> <número de linhas> <distância>
-    Onde: origem = canto superior esquerdo
+       python  gridpoints <x0> <y> <número de colunas> <número de linhas> <distância>
+    Onde: origem = canto superior esquerdo, ver sinal algebrico na linha 44
         x0                 => Float para coordenada X inicial;
         y0                 => Float para coordenada Y inicial;
         número de colunas  => Inteiro para o número de colunas;
