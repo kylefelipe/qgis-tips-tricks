@@ -41,7 +41,7 @@ def gridPoints(coordIni, numCol, numRow, dist):
     sys.stdout.write("X,Y\n")
     for row in range(numRow):
         for col in range(numCol):
-            sys.stdout.write('%.3f,%.3f\n'%(x0 + col * dist, y0 + row * dist))
+            sys.stdout.write('%.3f,%.3f\n'%(x0 + col * dist, y0 - row * dist))
             
             
 def main():
