@@ -1,10 +1,10 @@
-# QGIS, tips & tricks - PYTHON - gedal_recursive
+# QGIS, tips & tricks - PYTHON - gdal_recursive
 
 ### Autor: Kyle Felipe
 ### Data: 06/03/2018
 
 O script surgiu de uma necessidade de um colega no grupo do [Qgis Brasil](https://groups.google.com/forum/#!forum/qgisbrasil).
-A intenção é, utilizar o comando [gedal_translate](http://www.gdal.org/gdal_translate.html) nos arquivos que estiverem dentro de pastas e subpastas, utilizando __Python__. 
+A intenção é, utilizar o comando [gdal_translate](http://www.gdal.org/gdal_translate.html) nos arquivos que estiverem dentro de pastas e subpastas, utilizando __Python__. 
 A transformação só será feita nos formatos de arquivos que baterem com o informado.
 O arquivo transformado é gerado na mesma pasta do arquivo original.
 
@@ -23,7 +23,7 @@ python gdal_recursive.py <EPSG> <"endereço_da_pasta">
 
 ## gdal_recursive.py
 
-É o arquivo principal, contendo todo as funções do Python necessárias para rodar o comando gedal_translate.
+É o arquivo principal, contendo todo as funções do Python necessárias para rodar o comando gdal_translate.
 contem duas variáveis globais e as funções utilizadas:
 
 * _Variável_ format_in: É a extensão do formato a ser transformado.
