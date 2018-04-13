@@ -7,6 +7,7 @@ change_encode
 * [gdal_recursive](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/gdal_recursive): Script _Python_ que roda o comando gdal_translate nos arquivos dentro de um diretório e dentro de seus sub diretórios.
 * [gridpoints](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/gridpoints): Script _Python_ que gera uma malha (grid) de pontos.
 * [paralelas](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/paralelas): script python que utiliza um banco de dados [SPATIALITE](http://www.gaia-gis.it/gaia-sins/spatialite-cookbook/index.html) para gerar gerar linhas paralelas.
+* [select_unique](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/select_unique): Seleciona feições com atributos únicos em um campo da tabela de atributos.
 
 > "Always look on the bright side of life..."  - Monthy Python
 
