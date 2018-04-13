@@ -1,5 +1,5 @@
 # QGIS tips & tricks - PYTHON - select_unique
-__Pythonn__: 2.7
+__Python__: 2.7
 
 This script selects vectors in a layer that that have unique values on a field.
 
