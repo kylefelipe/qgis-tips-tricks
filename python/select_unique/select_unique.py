@@ -1,13 +1,17 @@
-col_name = "comarca"
-uniqueid = []
-attribute_data = []
+# Python Version 2.7
+# Author: Kyle Felipe
+# e-mail: kylefelipe@gmail.com
+# Date: 2018/05/12
+
+col_name = "COMARCA"
 layer = iface.activeLayer()
 iter = layer.getFeatures()
+at_data = {}
+unique_id = []
 for feature in iter:
-    attrs = feature.attributes()
-    attribute_data.append(feature[col_name])
-    if attribute_data.count(feature[col_name]) == 1:
-        uniqueid.append(feature.id())
-    
-layer.select(uniqueid)
-    
+    at_data[feature.id()]=feature[col_name]
+for i in at_data.keys():
+    if at_data.values().count(at_data[i]) ==1:
+        uniqueid.append(i)
+
+layer.setSelectedFeatures(uniqueid)
