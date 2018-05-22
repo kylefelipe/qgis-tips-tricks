@@ -8,6 +8,6 @@ change_encode
 * [gridpoints](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/gridpoints): Script _Python_ que gera uma malha (grid) de pontos.
 * [paralelas](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/paralelas): script python que utiliza um banco de dados [SPATIALITE](http://www.gaia-gis.it/gaia-sins/spatialite-cookbook/index.html) para gerar gerar linhas paralelas.
 * [select_unique](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/select_unique): Seleciona feições com atributos únicos em um campo da tabela de atributos.
-
+* [ogr_shp2kml](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/ogr_shp2kml): converte para KML os arquivos .shp que estiverem dentro de um diretório e seus sub diretórios.
 > "Always look on the bright side of life..."  - Monthy Python
 
