@@ -9,10 +9,10 @@ layers = iface.legendInterface().layers()
 for layer in layers:
 
     caminho = str(layer.source()).split(sep)[:-1]
-    arquivo = layer.source()[:-4]+".kml"
+    arquivo = layer.name()+"_bkp"
     saida = sep.join(caminho)+sep+arquivo
     layerType = layer.type()
     if layerType == QgsMapLayer.VectorLayer:
-        QgsVectorFileWriter.writeAsVectorFormat(layer, r"{saida}".format(saida=arquivo), "utf-8", None, "KML")
+        QgsVectorFileWriter.writeAsVectorFormat(layer, r"{saida}".format(saida=saida), "utf-8", None, "ESRI Shapefile")
         print r"{saida}".format(saida=arquivo)
-        
+
