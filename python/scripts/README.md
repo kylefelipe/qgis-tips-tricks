@@ -1,13 +1,6 @@
-# QGIS tips & tricks - PYTHON - select_unique
-__Python__: 2.7
+# QGIS tips & tricks - PYTHON - SCRIPTS
 
-This script saves all vectors layers form a QGIS project to a kml file in the same folder.
+Scripts feitos para rodar no terminal python do qgis
 
-USAGE:
-Open QGIS Python Terminal (Ctrl+Alt+P)
-Click "Show editor"
-Paste the code there or open the cript
-Click *Run Script*
-
-
-
+* [salva_camadas](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/salva_camadas): Esse script salva todas as camadas do projeto em um arquivo kml dentro das pastas das respectivas camadas (não funciona em camadas de texto delimitado).
+* [save_selected](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/save_selected): Esse script seleciona dentro de cada camada do projeto feições usando uma expressão (feita na calculadora de campo) e salva a seleção em um arquivo, dentro da pasta da camada.
