@@ -31,11 +31,11 @@ Função padroniza_data:
   Exemplo2 padroniza_data('/', '01/jan') >> Null
   OBS: É importante não utilizar letras como separador, bem como espaço e o simbolo _ (underline).
   
-Função relate_area_perimeter:
-  Faz a relação entre o perimetro de um vetor com sua area e retrona um valor entre 0 e 1, sendo que quanto mais proximo a 1
+Função polygon_sphericity:
+  Calcula o grau de esfericidade de um poligono, fazendo a relação entre o perimetro de um vetor com sua area e retrona um valor entre 0 e 1, sendo que quanto mais proximo a 1
   mais circular é a fórma do vetor.
   Dependencias:
-  Sitnaxe: relate_area_perimeter(area, perimeter)
+  Sitnaxe: polygon_sphericity(area, perimeter)
   area: É o campo na tabela de atributos que contem o dado de área, ou a função de calculo da área.
   perimeter: É o campo na tabela de atributos que contém o dado de área, ou a função de calculo da área.
   Exemplo: relate_area_perimeter($area, $perimeter) >>> 0.607763480072298
