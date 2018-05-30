@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from math import sqrt, pi
 @qgsfunction(args=2, group='Lista')
-def relate_area_perimeter(values, feature, parent):
-    """ Relaciona o perimetrimetro do vetor e sua área.
+def polygon_sphericity(values, feature, parent):
+    """ calcula o grau de esfericidade do poligono.
     Quanto mais proximo de 1, mais circular o vetor é, quando mais proximo de 0, mais alongada.
     AS MEDIDAS DEVEM ESTAR NA MESMA UNIDADE
 <p><h4>Syntax</h4><font color="blue">relate_area_perimeter</font>(<font color="red">AREA</font>, <font color="red">perimeter</font>)</p>
