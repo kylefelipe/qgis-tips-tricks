@@ -6,7 +6,7 @@ Abra a calculadora de campo do QGIS e clique na aba "EDITOR DE FUNÇÃO"
 Clique em "NEW FILE", copie o código da expressão que deseja e cole na janela do QGIS, em seguida clique em LOAD
 A função nova irá aparecer na listagem....
 
-Função verifica_valor:
+Função verifica_valor:  
   Recebe uma lista, ou um campo que contenha uma lista, os valores devem possui um separador (virgula, dois pontos, ponto e vírgula, etc),
   e retorna Verdadeiro ou Falso.
   Dependencias: 
