@@ -18,25 +18,24 @@ Função verifica_valor:
   Exemplo verifica_valor('1, 2, 3, 4', ',', 1) >> True  
   OBS: É importante não utilizar letras como separador, bem como espaço e o simbolo _ (underline).  
 
-Função padroniza_data:
+Função padroniza_data:  
   Padroniza uma data em em um campo da tabela de atributos e retorna no formato aaaa-mm-dd, a data a ser modificada
-  não contiver dia, mes e ano, a função retorna Null.
-  Dependencias:
-  Lista de funções: "Date and Time"
-  Sintaxe: padroniza_data(separador, data)
-  separador: é o simbolo utilizado como separador (vírgula, ponto, dois pontos, ponto e vígula...) entre aspas simples ''.
-  data: é o data, ou campo que conten os dados de data.
-  Exemplo1 padroniza_data('/', '01/jan/2017') >> 2017-01-01
-  Exemplo2 padroniza_data('/', '01/jan') >> Null
-  OBS: É importante não utilizar letras como separador, bem como espaço e o simbolo _ (underline).
+  não contiver dia, mes e ano, a função retorna Null.  
+  Dependencias: Não há  
+  Lista de funções: "Date and Time"  
+  Sintaxe: padroniza_data(separador, data)  
+  separador: é o simbolo utilizado como separador (vírgula, ponto, dois pontos, ponto e vígula...) entre aspas simples ''.  
+  data: é o data, ou campo que conten os dados de data.  
+  Exemplo1 padroniza_data('/', '01/jan/2017') >> 2017-01-01  
+  Exemplo2 padroniza_data('/', '01/jan') >> Null  
+  OBS: É importante não utilizar letras como separador, bem como espaço e o simbolo _ (underline).  
   
-Função polygon_sphericity:
-  Calcula o grau de esfericidade de um poligono, fazendo a relação entre o perimetro de um vetor com sua area e retrona um valor entre 0 e 1, sendo que quanto mais proximo a 1
-  mais circular é a fórma do vetor.
-  Dependencias:
-  Sitnaxe: polygon_sphericity(area, perimeter)
-  area: É o campo na tabela de atributos que contem o dado de área, ou a função de calculo da área.
-  perimeter: É o campo na tabela de atributos que contém o dado de área, ou a função de calculo da área.
-  Exemplo: relate_area_perimeter($area, $perimeter) >>> 0.607763480072298
-  OBSERVAÇÃO: AMBAS MEDIDAS NECESSITAM ESTAR NA MESMA UNIDADE.
+Função polygon_sphericity:  
+  Calcula o grau de esfericidade de um poligono, fazendo a relação entre o perimetro de um vetor com sua area e retrona um valor entre 0 e 1, sendo que quanto mais proximo a 1 mais circular é a fórma do vetor.  
+  Dependencias: Não Há  
+  Sitnaxe: polygon_sphericity(area, perimeter)  
+  area: É o campo na tabela de atributos que contem o dado de área, ou a função de calculo da área.  
+  perimeter: É o campo na tabela de atributos que contém o dado de área, ou a função de calculo da área.  
+  Exemplo: relate_area_perimeter($area, $perimeter) >>> 0.607763480072298  
+  OBSERVAÇÃO: AMBAS MEDIDAS NECESSITAM ESTAR NA MESMA UNIDADE.  
 
