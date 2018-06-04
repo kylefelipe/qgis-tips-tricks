@@ -4,7 +4,10 @@ Aqui estão contidas as funções que tenho criado para o QGIS.
 Como inserir funções novas no QGIS:
 Abra a calculadora de campo do QGIS e clique na aba "EDITOR DE FUNÇÃO"
 Clique em "NEW FILE", copie o código da expressão que deseja e cole na janela do QGIS, em seguida clique em LOAD
-A função nova irá aparecer na listagem....
+A função nova irá aparecer na listagem....  
+Assista ao vídeo de como como inserir novas funções, feitas no python, no QGIS:  
+[![Assista ao vídeo de como inserir novas funções no QGIS](https://img.youtube.com/vi/7JEcE0t70-c/0.jpg)](https://www.youtube.com/watch?v=7JEcE0t70-c)
+
 
 Função verifica_valor:  
   Recebe uma lista, ou um campo que contenha uma lista, os valores devem possui um separador (virgula, dois pontos, ponto e vírgula, etc), e retorna Verdadeiro ou Falso.  
