@@ -2,7 +2,7 @@
 from qgis.core import *
 from qgis.gui import *
 
-@qgsfunction(args='auto', group='Custom')
+@qgsfunction(args='auto', group='String')
 def wrap_delimiter(text, delimiter, feature, parent):
 	"""<p>Returns a string wrapped to a delimiter</p>
 	<p><h4>Syntax </h4> wrap_delimiter(string, delimiter)</p>
