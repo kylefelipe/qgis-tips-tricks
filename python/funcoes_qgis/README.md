@@ -10,7 +10,7 @@ Assista ao vídeo de como inserir novas funções, feitas no python, no QGIS:
 
 
 Função verifica_valor:  
-  Recebe uma lista, ou um campo que contenha uma lista, os valores devem possui um separador (virgula, dois pontos, ponto e vírgula, etc), e retorna Verdadeiro ou Falso.  
+> Recebe uma lista, ou um campo que contenha uma lista, os valores devem possui um separador (virgula, dois pontos, ponto e vírgula, etc), e retorna Verdadeiro ou Falso.
   Dependencias: Não há  
   Lista de funções: "Lista"  
   Sintaxe: verifica_valor(lista, divisor, dado)
@@ -22,7 +22,7 @@ Função verifica_valor:
   OBS: É importante não utilizar letras como separador, bem como espaço e o simbolo _ (underline).  
 
 Função padroniza_data:  
-  Padroniza uma data em em um campo da tabela de atributos e retorna no formato aaaa-mm-dd, a data a ser modificada
+> Padroniza uma data em em um campo da tabela de atributos e retorna no formato aaaa-mm-dd, a data a ser modificada
   não contiver dia, mes e ano, a função retorna Null.  
   Dependencias: Não há  
   Lista de funções: "Date and Time"  
@@ -34,7 +34,7 @@ Função padroniza_data:
   OBS: É importante não utilizar letras como separador, bem como espaço e o simbolo _ (underline).  
   
 Função polygon_sphericity:  
-  Calcula o grau de esfericidade de um poligono, fazendo a relação entre o perimetro de um vetor com sua area e retrona um valor entre 0 e 1, sendo que quanto mais proximo a 1 mais circular é a fórma do vetor.  
+> Calcula o grau de esfericidade de um poligono, fazendo a relação entre o perimetro de um vetor com sua area e retrona um valor entre 0 e 1, sendo que quanto mais proximo a 1 mais circular é a fórma do vetor.
   Dependencias: Não Há  
   Sitnaxe: polygon_sphericity(area, perimeter)  
   area: É o campo na tabela de atributos que contem o dado de área, ou a função de calculo da área.  
@@ -42,3 +42,12 @@ Função polygon_sphericity:
   Exemplo: relate_area_perimeter($area, $perimeter) >>> 0.607763480072298  
   OBSERVAÇÃO: AMBAS MEDIDAS NECESSITAM ESTAR NA MESMA UNIDADE.  
 
+Função wrap_delimiter:
+> Quebra um texto de acordo com um delimitador
+  Dependencias: Não Há
+  Sitnaxe: wrap_dellimiter(string, delimiter)
+  string: Texto a ser quebrado
+  delimieter: É o caractere onde deve ocorrer a quebra do texto, sempre ente aspas simples.
+  Exemplo: wrap-delimiter('don't panic, it will be wrapped', ',')
+  don't panic
+  it will be wrapped
