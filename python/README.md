@@ -10,7 +10,6 @@ Dicas e truques a serem usadas no qgis, utilizando python.
 * [select_unique](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/select_unique): Seleciona feições com atributos únicos em um campo da tabela de atributos.
 * [ogr_shp2kml](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/ogr_shp2kml): converte para KML os arquivos .shp que estiverem dentro de um diretório e seus sub diretórios.
 * [Scripts](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/scripts): Scripts que podem ser rodados pelo terminal python do Qgis
-
+* [reproj_recursive](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/reproj_recursive): Script _Python_ que roda o comando ogr2ogr nos arquivos dentro de um diretório e dentro de seus sub diretórios fazendo a mudança de src.
 
 > "Always look on the bright side of life..."  - Monthy Python
-

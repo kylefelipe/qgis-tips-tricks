@@ -8,8 +8,7 @@ from osgeo import ogr
 from subprocess import call
 
 format_in = ".shp"
-insrs = '4326'
-outsrs = '4674'
+outsrs = ''
 
 
 def list_path(path):
@@ -35,7 +34,7 @@ def find_file(path):
     return path_vector
 
 
-def run_ogr2ogr(file_in, encode):
+def run_ogr2ogr(file_in, srs):
     """ Change shapefile srs using ogr2ogr """
     driver = ogr.GetDriverByName('ESRI Shapefile')
 
@@ -43,23 +42,25 @@ def run_ogr2ogr(file_in, encode):
     file_out = file_in[:-4]+"_srs"+file_in[-4:]
     file_out2 = file_out
 
-    command = "ogr2ogr", "-lco", "ENCODING={to_encode}".format(to_encode=encode), "{file_out}".format(file_out=file_out2),\
-        "{file_in}".format(file_in=file_in)
+    command = "ogr2ogr", "-t_srs", "{out_srs}".format(out_srs=srs),\
+        "{file_out}".format(file_out=file_out2),\
+        "{file_in}".format(out_srs=outsrs, file_in=file_in)
     call(command)
     return "{}".format(file_out2)
 
 
 try:
-
     if len(sys.argv) > 1:
-        if os.path.isdir(sys.argv[2]):
-            to_encode = sys.argv[1]
+        # print sys.argv[2]
+        caminho = r'{}'.format(sys.argv[2])
+        if os.path.isdir(caminho):
+            outsrs = sys.argv[1]
             if list_path(sys.argv[2]) is not False:
                 for path in list_path(sys.argv[2]):
                     # print(">>:", path)
                     for file_in in find_file(path):
-                        file_in2 = path + "/" + file_in
-                        run_ogr2ogr(file_in=file_in2, encode=to_encode)
+                        file_in2 = path + os.sep + file_in
+                        run_ogr2ogr(file_in=file_in2, srs=outsrs)
                 print("Process finished...")
             else:
                 print("No files with the extension '{}' was found!!!".format(format_in))
@@ -68,4 +69,4 @@ try:
             print("Argument is not a valid path!")
 
 except:
-    print("Inform a valid path to use!!!")
+    print("Informe argumentos válidos")
