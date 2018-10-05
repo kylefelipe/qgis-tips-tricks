@@ -1,0 +1,8 @@
+Landsat578
+cython
+dask
+toolz
+cloudpickle
+future
+fastparquet
+
