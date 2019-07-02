@@ -7,3 +7,4 @@ Assista ao vídeo de como utilizar scripts python no QGIS:
 
 * [salva_camadas](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/salva_camadas): Esse script salva todas as camadas do projeto em um arquivo kml dentro das pastas das respectivas camadas (não funciona em camadas de texto delimitado).
 * [save_selected](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/save_selected): Esse script seleciona dentro de cada camada do projeto feições usando uma expressão (feita na calculadora de campo) e salva a seleção em um arquivo, dentro da pasta da camada.
+* [vector_layers_attribute_txt](https://github.com/kylefelipe/qgis-tips-tricks/tree/master/python/scripts/vector_layers_attribute_txt): Esse script exporta todos os campos e seus tipos de cada camada vetorial ou tabular para um arquivo TXT.
