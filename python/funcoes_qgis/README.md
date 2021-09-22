@@ -57,5 +57,4 @@ Função vertices_to_html:
   Dependências: Não há  
   Sintaxe: `vertices_to_html(geomety)`  
   geometry: É a geometria que deseja gerar a tabela.  
-  OBSERVAÇÃO: Em alguns casos, a função pega a geometria da feição atual (como no preenchimento de campos via calculadora de campo);  
-  OBSERVAÇÃO 2: PYTHON VERSION 3.5 +
+  OBSERVAÇÃO: PYTHON VERSION 3.5 +
