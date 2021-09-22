@@ -42,7 +42,7 @@ Função polygon_sphericity:
   Exemplo: relate_area_perimeter($area, $perimeter) >>> 0.607763480072298  
   OBSERVAÇÃO: AMBAS MEDIDAS NECESSITAM ESTAR NA MESMA UNIDADE.  
 
-Função wrap_delimiter:
+Função wrap_delimiter:  
 > Quebra um texto de acordo com um delimitador
   Dependencias: Não Há
   Sitnaxe: wrap_dellimiter(string, delimiter)
@@ -51,3 +51,11 @@ Função wrap_delimiter:
   Exemplo: wrap-delimiter('don't panic, it will be wrapped', ',')
   don't panic
   it will be wrapped
+
+Função vertices_to_html:
+> Cria uma tabela HTML com os vértices de uma geometria enumerados  
+  Dependências: Não há  
+  Sintaxe: `vertices_to_html(geomety)`  
+  geometry: É a geometria que deseja gerar a tabela.  
+  OBSERVAÇÃO: Em alguns casos, a função pega a geometria da feição atual (como no preenchimento de campos via calculadora de campo);  
+  OBSERVAÇÃO 2: PYTHON VERSION 3.5 +
