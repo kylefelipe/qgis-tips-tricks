@@ -9,7 +9,7 @@ virtual_layer_name = 'nova_camada_virtual' #Nome da camada virtual a ser gerada
 new_column = 'rotulo' # Nome do campo novo
 prefix = 'A - ' # prefixo do campo novo - esta linha nao pode ser removida
 sufix = '' # Sufixo - esta linha nao pode ser removida
-
+dest_EPSG = 31983
 
 project = QgsProject.instance()
 v_layer_id = QgsExpressionContextUtils.projectScope(project).variable('v_layer_id')
@@ -23,7 +23,7 @@ origin = iface.activeLayer()
 
 
 SQL = f"""SELECT l.*, '{prefix}' || """
-SQL += """row_number() OVER( ORDER BY area(ST_transform(l.geometry, 31983)) ASC )"""
+SQL += f"""row_number() OVER( ORDER BY area(ST_transform(l.geometry, {dest_EPSG})) ASC )"""
 SQL += f"""|| '{sufix}' as {new_column}"""
 SQL += f""" FROM {origin.id()} as l"""
 dest_vector = QgsVectorLayer(f"?query={SQL}", virtual_layer_name, "virtual" )

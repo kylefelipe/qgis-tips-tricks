@@ -17,3 +17,4 @@ Variáveis que podem ser editadas no script
 * `new_column` = Nome do campo novo
 * `prefix` = prefixo do campo novo - esta linha nao pode ser removida (Ex: A - 1, A - 2)
 * `sufix` = Sufixo - esta linha nao pode ser removida (Ex: 1 - A, 2 - A)
+* `dest_EPSG` = EPSG no qual deseja fazer o calculo de área (Ex: 31983)
