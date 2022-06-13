@@ -25,7 +25,7 @@ origin = iface.activeLayer()
 SQL = f"""SELECT l.*, '{prefix}' || """
 SQL += f"""row_number() OVER( ORDER BY area(ST_transform(l.geometry, {dest_EPSG})) ASC )"""
 SQL += f"""|| '{sufix}' as {new_column}"""
-SQL += f""" FROM {origin.id()} as l"""
+SQL += f""" FROM "{origin.id()}" as l;"""
 dest_vector = QgsVectorLayer(f"?query={SQL}", virtual_layer_name, "virtual" )
 QgsProject.instance().addMapLayer(dest_vector)
 QgsExpressionContextUtils.setProjectVariable(project, 'v_layer_id', dest_vector.id())
