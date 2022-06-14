@@ -11,5 +11,6 @@ Dicas e truques a serem usadas no qgis, utilizando python.
 * [ogr_shp2kml](./python/ogr_shp2kml): converte para KML os arquivos .shp que estiverem dentro de um diretório e seus sub diretórios.
 * [Scripts](./python/scripts): Scripts que podem ser rodados pelo terminal python do Qgis
 * [reproj_recursive](./python/reproj_recursive): Script _Python_ que roda o comando ogr2ogr nos arquivos dentro de um diretório e dentro de seus sub diretórios fazendo a mudança de src.
+* [Processing Scripts](./processing_scripts): Scripts que podem ser adicionados à caixa de ferramenta do [QGIS](www.qgis.org)
 
 > "Always look on the bright side of life..."  - Monthy Python
