@@ -8,9 +8,6 @@
 # https://docs.qgis.org/3.22/en/docs/pyqgis_developer_cookbook/intro.html?highlight=startup#running-python-code-when-qgis-starts
 # o nome do arquivo precisa ser startup.py, pois é o nome que o QGIS vai procurar
 
-from qgis.core import (
-    QgsExpression
-)
 from qgis.utils import qgsfunction
 
 from qgis.core import *
@@ -35,11 +32,10 @@ def retira_acento(value1, feature, parent):
     return value1
 
 functions_to_load = (retira_acento,)
+
 def registerFunction(isRegister=True):
     """Registra as funções para uso no qgis"""
-    do_register = ( QgsExpression.registerFunction, lambda f: f )
-    ( funcReg, funcArg ) = do_register
     for f in functions_to_load:
-        funcReg(funcArg(f))    
+        QgsExpression.registerFunction(f)    
 
 registerFunction()
