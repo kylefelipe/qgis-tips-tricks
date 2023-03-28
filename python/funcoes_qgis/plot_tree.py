@@ -4,6 +4,8 @@
 # sendo que a distância em x é o deslocamento em relação ao início da linha, em metros
 # e a distância em y é o deslocamento perpendicular à linha, em metros
 # Qgis => 3.22
+# Função foi criada em função da dúvida de um colega no grupo do telegram do Qgis Brasil
+# https://t.me/thinkfreeqgis
 
 from qgis.core import *
 from qgis.gui import *
