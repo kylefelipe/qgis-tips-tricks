@@ -32,6 +32,21 @@ Função padroniza_data:
   Exemplo1 padroniza_data('/', '01/jan/2017') >> 2017-01-01  
   Exemplo2 padroniza_data('/', '01/jan') >> Null  
   OBS: É importante não utilizar letras como separador, bem como espaço e o simbolo _ (underline).  
+
+Função plot_tree:  
+> Função cria um ponto em uma linha a partir de uma distância em x e y  
+> sendo que a distância em x é o deslocamento em relação ao início da linha, em metros  
+> e a distância em y é o deslocamento perpendicular à linha, em metros  
+  Dependencias: Não há  
+  Lista de funções: "Kyle Expressions"  
+  Sintaxe: plot_tree(dist_x, dist_y, layer_id, layer_field, value, side)  
+  dist_x: É a Distancia em x, em metros, em relação ao início da linha.
+  dist_y: É a Distancia em y, em metros, perpendicular à linha a apartir do ponto acima
+  layer_id: É o id da camada que contém a linha
+  layer_field: É o campo identificador da feição na camada que contém a linha
+  value: É o valor do campo identificador da feição na camada que contém a linha
+  side: É o lado da linha onde o ponto será plotado, sendo que 'left' é o lado esquerdo e 'right' é o lado direito
+  Exemplo: plot_tree('layer', 'tree', 'parent')  
   
 Função polygon_sphericity:  
 > Calcula o grau de esfericidade de um poligono, fazendo a relação entre o perimetro de um vetor com sua area e retrona um valor entre 0 e 1, sendo que quanto mais proximo a 1 mais circular é a fórma do vetor.
