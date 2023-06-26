@@ -40,7 +40,7 @@ O raster a ser convertido é: ./GRIP4_density_tp5/grip4_tp5_dens_m_km2.asc
 ```
 Para a conversão, vamos remover o echo e incluir o gdal_translate. Ficando assim:
 ```
-for i in $raster; do gdal_translate $a -a_srs EPSG:4326 -of GTiff ${i%.*}.tif; done
+for i in $raster; do gdal_translate $i -a_srs EPSG:4326 -of GTiff ${i%.*}.tif; done
 ```
 **Entendendo o comando e parâmetros usados**
 Como os arquivos asc não possuem o Sistema de Referencia Cartográfica definido, vou aproveitar e definir o SRC para o output, com o comando `-a_srs EPSG:4326` onde 4326 é o id do SRC WGS84. Além disso, defino o formato de outpu com o comando `-of GTiff`.
