@@ -1,8 +1,8 @@
 # QGIS tips & tricks - PYTHON - SCRIPTS
 
-Scripts feitos para rodar no terminal python do qgis  
-Assista ao vídeo de como utilizar scripts python no QGIS:  
-[![Assista ao vídeo dPython + Qgis = Mais tempo na Vida](https://img.youtube.com/vi/0kaYuPeM0wI/0.jpg)](https://www.youtube.com/watch?v=0kaYuPeM0wI)  
+Scripts feitos para rodar no terminal python do qgis
+Assista ao vídeo de como utilizar scripts python no QGIS:
+[![Assista ao vídeo dPython + Qgis = Mais tempo na Vida](https://img.youtube.com/vi/0kaYuPeM0wI/0.jpg)](https://www.youtube.com/watch?v=0kaYuPeM0wI)
 
 
 * [salva_camadas](./salva_camadas): Esse script salva todas as camadas do projeto em um arquivo kml dentro das pastas das respectivas camadas (não funciona em camadas de texto delimitado).
@@ -11,4 +11,4 @@ Assista ao vídeo de como utilizar scripts python no QGIS:
 * [reorder_vertices](./reorder_vertices): Esse script gera uma nova camada de pontos com os vértices de um polígonos, reordenando ele a partir de um vértice escolhido.
 * [generate_label](./generate_label): Esse script gera uma nova camada virtual com a nova coluna com o rótulo da feição, ordenada pela área da geometria.
 * [load_functions](./load_functions): Esse script faz o registro das funções inseridas nele quando o QGIS é iniciado.
-
+* [Add Serviços SIGEF](./sigef_services/): Esse script adiciona os geoserviços do SIGEF no QGIS.
